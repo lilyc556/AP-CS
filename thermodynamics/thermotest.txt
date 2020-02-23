@@ -1,0 +1,22 @@
+public class ThermoTest {
+
+	public static void main(String [] args){
+		Reaction one = new Rust();
+		Reaction two = new Volcano();
+		Reaction three = new Stove();
+		Reaction four = new SilverOxide();
+		
+		System.out.println("Rust:");
+		System.out.println(one);
+		System.out.println("\n ----------------------------------------------------------------------");
+		System.out.println("Volcano:");
+		System.out.println(two);
+		System.out.println("\n ----------------------------------------------------------------------");
+		System.out.println("Stove:");
+		System.out.println(three);
+		System.out.println("\n ----------------------------------------------------------------------");
+		System.out.println("Silver Oxide:");
+		System.out.println(four);
+		
+	}
+}

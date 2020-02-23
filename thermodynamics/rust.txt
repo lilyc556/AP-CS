@@ -1,0 +1,18 @@
+public class Rust extends Reaction {
+
+	public Rust(){
+		super("4 Fe + 3O2","2Fe2O3");
+		setEnthalpy();
+		setEntropy();
+		setGibbs(getEnthalpy(),getEntropy());
+	}
+	
+	public void setEnthalpy(){
+		double enthalpy = (2 * -822.16) - 0;
+		setEnthalpy(enthalpy);
+	}
+	public void setEntropy(){
+		double entropy = (2 * 89.96) - (4 * 27.15 + 3 * 205.0);
+		setEntropy(entropy);
+	}
+} //end of class

@@ -1,0 +1,41 @@
+import java.text.DecimalFormat;
+public abstract class Reaction implements Enthalpy, Entropy, GibbsFreeEnergy {
+
+	private String reactants;
+	private String products;
+	private double enthalpy;
+	private double entropy;
+	private double gibbs;
+	
+	public Reaction(String reactants, String products){
+		this.reactants=reactants;
+		this.products=products;
+	}
+	
+	public void setEnthalpy(double H){ enthalpy = H; }
+	public void setEntropy(double S){ entropy = S; }
+	public void setGibbs(double enthalpy, double entropy){
+		gibbs = enthalpy - temp*entropy;
+	}
+	
+	public String getReactants(){ return reactants; }
+	public String getProducts(){ return products; }
+	public double getEnthalpy(){ return enthalpy; }
+	public double getEntropy(){ return entropy; }
+	public boolean spontaneous(){
+		if (gibbs<0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	} //boolean 
+	
+	public String toString(){
+		DecimalFormat sigfig = new DecimalFormat("0.00");
+		
+		return " Equation: " + reactants + " ---> " + products + "\n Enthalpy: " + sigfig.format(getEnthalpy()) + "\n Entropy: " + sigfig.format(getEntropy()) + "\n Gibbs: " + sigfig.format(gibbs) + "\n Spontaneity: " + spontaneous();
+		
+	}
+} //class
+

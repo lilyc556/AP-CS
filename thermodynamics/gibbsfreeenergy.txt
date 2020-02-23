@@ -1,0 +1,5 @@
+public interface GibbsFreeEnergy {
+
+	double temp=298.15;
+	void setGibbs(double enthalpy, double entropy);
+}

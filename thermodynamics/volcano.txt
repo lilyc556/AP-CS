@@ -1,0 +1,18 @@
+public class Volcano extends Reaction {
+
+	public Volcano(){
+		super("NaHCO3 + CH3COOH","H2O + CO2 + NaCH3CO2");
+		setEnthalpy();
+		setEntropy();
+		setGibbs(getEnthalpy(),getEntropy());
+	}
+	
+	public void setEnthalpy(){
+		double enthalpy = (-285.83 + -393.5 + -709.32) - (-947.7 + -483.5);
+		setEnthalpy(enthalpy);
+	}
+	public void setEntropy(){
+		double entropy = (69.91 + 213.6 + 138.1) - (102.1 - 158.0);
+		setEntropy(entropy);
+	}
+} //end of class

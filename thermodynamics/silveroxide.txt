@@ -1,0 +1,18 @@
+public class SilverOxide extends Reaction {
+
+	public SilverOxide(){
+		super("4 AgCl + O2","2 Ag2O + 2 Cl2");
+		setEnthalpy();
+		setEntropy();
+		setGibbs(getEnthalpy(),getEntropy());
+	}
+	
+	public void setEnthalpy(){
+		double enthalpy = (2*-31.05+2*0)-(4*-127.0+0);
+		setEnthalpy(enthalpy);
+	}
+	public void setEntropy(){
+		double entropy = (2*121.3+2*222.96)-(4*96.11+205.0);
+		setEntropy(entropy);
+	}
+} //end of class

@@ -1,0 +1,18 @@
+public class Stove extends Reaction {
+
+	public Stove(){
+		super("CH4 + 2 O2","2 H2O + CO2");
+		setEnthalpy();
+		setEntropy();
+		setGibbs(getEnthalpy(),getEntropy());
+	}
+	
+	public void setEnthalpy(){
+		double enthalpy = (2*-285.83 + -393.5) - (-74.8+2*0);
+		setEnthalpy(enthalpy);
+	}
+	public void setEntropy(){
+		double entropy = (2*69.91+213.6) - (186.3+2*205.0);
+		setEntropy(entropy);
+	}
+} //end of class
