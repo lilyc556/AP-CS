@@ -1,0 +1,28 @@
+public class standarddev {
+	public static void main(String[] args){
+	    int[] testArray1 = {9,8,4,5,6,3,1,4,7,5,9,6,2,3,1,4,5,6,3,2,4};
+	    int[] testArray2 = {-9,-8,-4,-5,-6,-3,-1,-4,-7,-5,-9,-6,-2,-3,-1,-4,-5,-6,-3,-2,-4};
+	    int[] testArray3 = {9,8,4,2,-7,-1,-10,5,6,4,2};
+	    
+	    System.out.println("Standard Deviation");
+	    System.out.println(standardDeviation(testArray1));
+	    System.out.println(standardDeviation(testArray2));
+	    System.out.println(standardDeviation(testArray3));
+}
+	
+	   public static double standardDeviation(int[] nums) {
+		   	 int sum = 0;
+		   	 for (int i = 0; i < nums.length; i++) {
+		   		 sum += nums[i];
+		   	 }
+		   	 double mean = sum / nums.length;
+		   	 int sumOfDeviations = 0;
+		   	 for (int i = 0; i < nums.length; i++) {
+		   		 sumOfDeviations += (nums[i] - mean) * (nums[i] - mean);
+		   	 }
+		   	 double variance = sumOfDeviations / nums.length;
+		   	 double standardDev = Math.sqrt(variance);
+		   	 return standardDev;
+		    }
+
+}

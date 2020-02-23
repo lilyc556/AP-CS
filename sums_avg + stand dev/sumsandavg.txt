@@ -1,0 +1,61 @@
+import java.util.Random;
+
+public class SumsAndAverages {
+	
+	static int[] arr = new int[25];
+	
+	public static void main(String[] args) {
+		
+		Random rand = new Random();
+		
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = rand.nextInt(11);	//[1,10]
+			System.out.print(arr[i] + " ");
+		}
+		
+		System.out.println("\nSum of even numbers: " + sumOfEven());
+		System.out.println("Sum of odd numbers: " + sumOfOdd());
+		System.out.println("Average of even numbers: " + avgOfEven());
+		System.out.println("Average of odd numbers: " + avgOfOdd());
+	}
+	
+	public static int sumOfEven(){
+		int sum = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 == 0){
+				sum += arr[i];
+			}
+		}
+		return sum;
+	}
+	
+	public static int sumOfOdd(){
+		int sum = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 != 0){
+				sum += arr[i];
+			}
+		}
+		return sum;
+	}
+	
+	public static double avgOfEven(){
+		double numOfEven = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 == 0){
+				numOfEven++;
+			}
+		}
+		return (sumOfEven() / numOfEven);
+	}
+	
+	public static double avgOfOdd(){
+		double numOfOdd = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 != 0){
+				numOfOdd++;
+			}
+		}
+		return (sumOfOdd() / numOfOdd);
+	}
+}
