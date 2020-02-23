@@ -1,0 +1,15 @@
+public abstract class Orderr extends Classs {
+    public String orderName="";
+    public String orderCharacteristics="";
+
+    public String getorderName(){return orderName;}
+    public String getorderCharacteristics() { return orderCharacteristics;}
+    public abstract String setorderName(String orderName);
+    public void setorderCharacteristics(String orderCharacteristics) { this.orderCharacteristics=orderCharacteristics;}
+
+    public String toString(){
+        String s = "";
+        s= super.toString() +" "+ orderName;
+        return s;
+    }
+}//class

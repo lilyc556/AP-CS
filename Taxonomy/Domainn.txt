@@ -1,0 +1,39 @@
+public abstract class Domainn {
+    public String domainName="";
+    public boolean alive = true;
+    public boolean prokaryote=false;
+    public boolean eukaryote=false;
+
+
+    /*public Domainn (String name){
+            domainName=name;
+            if (name.compareToIgnoreCase("eukarya")==0){
+                    eukaryote = true;
+                    prokaryote = false;
+            }
+                    else{
+                            prokaryote = true;
+                            eukaryote = false;
+                    }
+
+
+    }*/
+
+
+    public String getdomainName(){return domainName;}
+    public boolean getalive(){return alive;}
+    public boolean getprokaryote(){return prokaryote;}
+    public boolean geteukaryote(){return eukaryote;}
+    public abstract String setdomainName(String domainName);
+    public void setalive(boolean alive) { this.alive=alive;}
+    public void setprokaryote(boolean prokaryote) { this.prokaryote=prokaryote;}
+    public void seteukaryote(boolean eukaryote) { this.eukaryote=eukaryote;}
+
+    public String toString()
+
+    {
+        String s = "";
+        s= domainName;
+        return s;
+    }
+} //end of class

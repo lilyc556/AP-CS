@@ -1,0 +1,18 @@
+public abstract class Speciess extends Genuss{
+    public String speciesName="";
+    public String commonName="";
+
+    public String getspeciesName(){return speciesName;}
+    public String getcommonName() { return commonName;}
+    public void setspeciesName(String speciesName) {
+            this.speciesName = speciesName;
+    }
+    public void setcommonName(String commonName) { this.commonName=commonName;}
+
+    public String toString(){
+        String s = "";
+        s= super.toString()+" "+ speciesName +" "+ commonName;
+        return s;
+    }
+
+}

@@ -1,0 +1,14 @@
+public abstract class Kingdomm extends Domainn{
+    public  String kingdomName ="";
+
+    public String getkingdomName(){return kingdomName;}
+    public abstract String setkingdomName(String kingdomName);
+
+    public String toString(){
+        String s = "";
+        s=super.toString() + " " + kingdomName;
+        return s;
+    }
+}
+
+

@@ -1,0 +1,17 @@
+public abstract class Familyy extends Orderr {
+    public String familyName="";
+    public String familyCharacteristics="";
+
+    public String getfamilyName(){return familyName;}
+    public String getfamilyCharacteristics() { return familyCharacteristics;}
+    public void setfamilyName(String familyName){
+        this.familyName = familyName;
+    }
+    public void setfamilyCharacteristics(String familyCharacteristics) { this.familyCharacteristics=familyCharacteristics;}
+
+    public String toString(){
+        String s = "";
+        s= super.toString() +" " + familyName;
+        return s;
+    }
+}//class

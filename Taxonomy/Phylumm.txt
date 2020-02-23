@@ -1,0 +1,29 @@
+public abstract class Phylumm extends Kingdomm{
+    public String phylumName="";
+    public String phylumCharacteristics="";
+    public boolean heterotroph=false;
+    public boolean autotroph=false;
+    public boolean selfMotile=false;
+    public boolean singleCell=false;
+
+    public String getphylumName(){return phylumName;}
+    public String getphylumCharacteristics() {return phylumCharacteristics;}
+    public boolean getheterotroph(){return heterotroph;}
+    public boolean getautotroph(){return autotroph;}
+    public boolean getselfMotile(){return selfMotile;}
+    public boolean getsingleCell(){return singleCell;}
+
+    public abstract void setphylumName(String phylumName);
+    public void setphylumCharacteristics(String phylumCharacteristics) { this.phylumCharacteristics=phylumCharacteristics;}
+    public abstract void setautotroph(boolean autotroph);
+    //public abstract void setselfMotile(boolean selfMotile);
+    public abstract void setsingleCell(boolean singleCell);
+    public abstract void setheterotroph(boolean heterotroph);
+    public abstract void setselfMotile(boolean selfMotile);
+    public String toString(){
+        String s = "";
+        s= super.toString() +" "+ phylumName;
+        return s;
+    }
+
+}//class

@@ -1,0 +1,97 @@
+import java.util.*;
+public class LifeFormEntry {
+    public static void main(String[]args){
+        ArrayList<LifeForms> list = new ArrayList<LifeForms>();
+
+        LifeForms panda = new LifeForms();
+        System.out.println(panda);
+        list.add(panda);
+
+        LifeForms rpanda = new LifeForms();
+        System.out.println(rpanda);
+        list.add(rpanda); 
+/*
+        LifeForms lemur = new LifeForms();
+        System.out.println(lemur);
+        list.add(lemur); */
+        System.out.println("\n ------------------------------------------------------------------ ");
+        System.out.println(kAnimalia(list));
+        System.out.println(OKAYheterotroph(list));
+        System.out.println(selfiemotile(list)); 
+        System.out.println(phylumm(list));
+        System.out.println(family(list));
+    }
+
+    public static ArrayList kAnimalia(ArrayList<LifeForms>list){
+        ArrayList<String> animalia = new ArrayList<String>();
+        for(LifeForms A:list){
+                if (A.kingdomName.equalsIgnoreCase("animalia")){
+                        animalia.add(A.speciesName);
+                }
+        }
+        System.out.println("The organisms that are in the kingdom Animalia are: ");
+        if(animalia.size()==0)
+                System.out.println("There are none.");
+        return animalia;
+    }
+
+    public static ArrayList OKAYheterotroph(ArrayList<LifeForms>list){
+        ArrayList<String> hetero = new ArrayList<String>();
+        for (LifeForms B:list){
+                if(B.heterotroph){
+                        hetero.add(B.speciesName);
+
+                }
+        }
+        System.out.println("The organisms that are heterotrophs are: ");
+        if(hetero.size()==0)
+                System.out.println("There are none.");
+        return hetero;
+    }
+
+    public static ArrayList selfiemotile(ArrayList<LifeForms>list){
+        ArrayList<String> self = new ArrayList<String>();
+        for (LifeForms C:list){
+                if (C.selfMotile = true){
+                        self.add(C.speciesName);
+                }
+        }
+        System.out.println("The organisms that are self motile are: ");
+        if(self.size()==0)
+                System.out.println("There are none.");
+        return self;
+    } 
+
+    public static ArrayList phylumm(ArrayList<LifeForms>list){
+        ArrayList<LifeForms> tempLifeForms = new ArrayList<LifeForms>();
+        tempLifeForms = (ArrayList<LifeForms>)list.clone();
+        
+        ArrayList<ArrayList<String>> phy = new ArrayList<ArrayList<String>>();
+        for (LifeForms I:tempLifeForms){
+            if(I != null){
+                String currentPhylum = I.getphylumName();
+                I = null;
+                
+                ArrayList<String> temp = new ArrayList<String>();
+                for (LifeForms J:tempLifeForms){
+                    if(currentPhylum.equals(J.getphylumName())){
+                        temp.add(J.getphylumName());
+                        J = null;
+                    }
+                }
+                phy.add(temp);
+            }
+        }
+        System.out.println("The organisms that share the same phylum are: ");
+        return phy;
+    }
+
+    public static ArrayList family(ArrayList<LifeForms>list){
+        ArrayList<String> fam = new ArrayList<String>();
+        for (LifeForms E:list){
+                fam.add(E.familyName);
+        }
+        System.out.println("The family names are: ");
+        return fam;
+    }
+} //class

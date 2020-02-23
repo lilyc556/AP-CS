@@ -1,0 +1,15 @@
+public abstract class Genuss extends Familyy {
+public String genusName="";
+public String genusCharacteristics="";
+
+public String getgenusName(){return genusName;}
+public String getgenusCharacteristics() { return genusCharacteristics;}
+public abstract String setgenusName(String genusName);
+public void setgenusCharacteristics(String genusCharacteristics) { this.genusCharacteristics=genusCharacteristics;}
+
+    public String toString(){
+	String s = "";
+	s= super.toString()  +" "+ genusName;
+	return s;
+    }
+}//class

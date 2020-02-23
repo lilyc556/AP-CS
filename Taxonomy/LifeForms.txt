@@ -1,0 +1,224 @@
+import java.util.*;
+public class LifeForms extends Speciess{
+	
+public LifeForms(){
+	Scanner scan = new Scanner(System.in);
+	System.out.println("What's the species name? ");
+	String speciesname = scan.nextLine();
+	this.setspeciesName(speciesname);
+	System.out.println("What's the common name? ");
+	String common = scan.nextLine();
+	this.setcommonName(common);
+	System.out.println("What's the genus name? ");
+	String genusname = scan.nextLine();
+	this.setgenusName(genusname);
+	System.out.println("Would you like to enter genus characteristics? ");
+	String gench = scan.nextLine();
+	if(gench.compareToIgnoreCase("yes")==0)
+		{System.out.println("What are the characteristics? : ");
+		String chari = scan.nextLine();
+		this.setgenusCharacteristics(chari);}
+	System.out.println("What's the family name? ");
+	String familyname=scan.nextLine();
+	this.setfamilyName(familyname);
+	System.out.println("Would you like to enter family characteristics? ");
+	String famch = scan.nextLine();
+	if(famch.compareToIgnoreCase("yes")==0)
+		{System.out.println("What are the characteristics? : ");
+		String no = scan.nextLine();
+		this.setfamilyCharacteristics(no);}
+	System.out.println("What is the order name? ");
+	String ordername = scan.nextLine();
+	this.setorderName(ordername);
+	System.out.println("Would you like to enter order characteristics? ");
+	String orch = scan.nextLine();
+	if(orch.compareToIgnoreCase("yes")==0)
+		{System.out.println("What are the characteristics? : ");
+		String lmao = scan.nextLine();
+		this.setorderCharacteristics(lmao);}
+	System.out.println("What is the class name? ");
+	String classname = scan.nextLine();
+	this.setclassName(classname);
+	System.out.println("Would you like to enter class characteristics? ");
+	String clch = scan.nextLine();
+	if(clch.compareToIgnoreCase("yes")==0)
+		{System.out.println("What are the characteristics? : ");
+		String die = scan.nextLine();
+		this.setclassCharacteristics(die);}
+	System.out.println("What is the phylum name? ");
+	String phylumname = scan.nextLine();
+	this.setphylumName(phylumname);
+	System.out.println("Would you like to enter phylum characteristics? ");
+	String phych = scan.nextLine();
+	if(phych.compareToIgnoreCase("yes")==0)
+		{System.out.println("What are the characteristics? : ");
+		String kms = scan.nextLine();
+		this.setphylumCharacteristics(kms);}
+	System.out.println("What is the kingdom name? ");
+	String kingdomname = scan.nextLine();
+	this.setkingdomName(kingdomname);
+	System.out.println("What is the domain name? ");
+	String domainname = scan.nextLine();
+	this.setdomainName(domainname);
+	if (domainname.compareToIgnoreCase("eukarya")==0){
+		eukaryote = true;
+		prokaryote = false;
+	}
+		else{
+			prokaryote = true;
+			eukaryote = false;
+		}
+	System.out.println("Does it make its own food? ");
+	String troph = scan.nextLine();
+	if(troph.compareToIgnoreCase("Yes") == 0)
+		this.setautotroph(true);
+	else 
+		this.setheterotroph(true);
+	System.out.println("Is it self motile? ");
+	String motile = scan.nextLine();
+	if(motile.compareToIgnoreCase("Yes")==0)
+	this.setselfMotile(true);
+	else 
+		this.setselfMotile(false);
+	System.out.println("Is this a single celled organism? ");
+	String cell = scan.nextLine();
+	if(cell.compareToIgnoreCase("Yes")==0)
+		this.setsingleCell(true);
+	else 
+		this.setsingleCell(false);
+	System.out.println("Is the organism alive? ");
+	String alive = scan.nextLine();
+	if(alive.compareToIgnoreCase("yes")==0)
+		this.setalive(true);
+	else
+		this.setalive(false);
+	
+	System.out.println("Domain: " + domainname );
+	System.out.println("Alive?: " + alive);
+	System.out.println("Prokaryote?: "+prokaryote);
+	System.out.println("Eukaryote?: "+eukaryote);
+	System.out.println("Kingdom: " + kingdomname );
+	System.out.println("Phylum: " +phylumname);
+	System.out.println("Phylum Characteristics: "+ phylumCharacteristics);
+	System.out.println("Heterotroph?: " +heterotroph);
+	System.out.println("Autotroph?: "+autotroph);
+	System.out.println("Self Motile?: " +selfMotile);
+	System.out.println("Single Cell?: "+singleCell);
+	System.out.println("Class: "+classname);
+	System.out.println("Class characteristics "+classCharacteristics);
+	System.out.println("Order: "+ordername);
+	System.out.println("Order characteristics: "+orderCharacteristics);
+	System.out.println("Family: "+familyname);
+	System.out.println("Genus: "+genusName);
+	System.out.println("Species: " +speciesname);
+	
+}
+	
+	
+
+
+/*	public void setdomainName(String domainName) { this.domainName=domainName;}
+	public void setkingdomName(String kingdomName) {this.kingdomName=kingdomName;}
+	public void setphylumName(String phylumName) {this.phylumName=phylumName;}
+	public void setclassName(String className) {this.className=className;}
+	public void setorderName(String orderName) {this.orderName=orderName;}
+	public void setfamilyName(String familyName) {this.familyName=familyName;}
+	public void setgenusName(String genusName) {this.kingdomName=genusName;}
+	public void setspeciesName(String speciesName) {this.speciesName=speciesName;}
+	*/
+	public String toString()
+
+	{
+
+	return (domainName +"" + kingdomName +""+ phylumName+""+className+""+orderName+""+familyName+""+genusName+""+speciesName);
+
+	}
+
+
+
+
+
+
+
+
+	@Override
+	public String setgenusName(String genusName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+	@Override
+	public String setorderName(String orderName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+	@Override
+	public String setclassName(String className) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+	@Override
+	public void setphylumName(String phylumName) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	@Override
+	public void setautotroph(boolean autotroph) {
+		
+	}
+
+	public void setheterotroph(boolean heterotroph){
+	this.heterotroph=heterotroph;
+}
+
+
+	@Override
+	public void setselfMotile(boolean selfMotile) {
+		this.selfMotile = selfMotile;
+		
+	}
+
+
+
+
+	@Override
+	public void setsingleCell(boolean singleCell) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	@Override
+	public String setkingdomName(String kingdomName) {
+		this.kingdomName= kingdomName;
+		return kingdomName;
+	}
+
+
+
+
+	@Override
+	public String setdomainName(String domainName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
+
+
