@@ -1,0 +1,38 @@
+public class Senior extends Student
+{
+	private boolean willGraduate;
+	//2 constructors
+	public Senior(String name, double gpa)
+	{
+		super(name,gpa);
+		this.setWillGraduate();
+	}
+	//getter and setter
+	public boolean getWillGraduate()
+	{
+		return willGraduate;
+	}
+	public void setWillGraduate()
+	{
+		if (getGPA() >= 2.0)
+         willGraduate = true;
+      else
+         willGraduate = false;   
+	}
+   public int compareTo(Object temp)
+   {
+      Senior other = (Senior) temp;
+      if (getGPA() > other.getGPA())
+         return 1;
+      else if (getGPA() < other.getGPA())
+         return -1;
+      else
+         return 0;
+   }
+   
+	//toString
+	public String toString()
+	{
+		return super.toString() + "  " + willGraduate+ " Woo!! Graduation!!";
+	}
+}

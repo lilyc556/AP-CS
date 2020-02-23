@@ -1,0 +1,38 @@
+public class Student extends Person 
+{
+	static int idNumberGenerator = 100000;
+   private double gpa;
+   private int grade;
+	private int idNumber;
+	
+	public Student(String name, double g)
+	{
+		super(name);
+		this.idNumber = idNumberGenerator;
+		gpa = g;		
+	}
+	
+   public void setGrade(int g)
+   {
+      grade = g;
+   }
+   
+   public double getGPA(){ return gpa; }
+   public double getGrade(){ return grade; }
+   
+   public int compareTo(Object temp)
+   {
+      Student other = (Student) temp;
+      if (idNumber > other.idNumber)
+         return 1;
+      else if (idNumber < other.idNumber)
+         return -1;
+      else
+         return 0;
+   }
+   
+	public String toString()
+	{
+		return super.toString() + " " + idNumber +"  " + gpa;
+	}
+}

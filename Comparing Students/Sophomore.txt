@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Sophomore extends Student
+{
+   private int PSATScore;
+   Scanner scan = new Scanner(System.in);
+	//create a constructor
+	public Sophomore(String name, double gpa, int score)
+	{
+		super(name, gpa);
+      this.setGrade(10);
+      this.PSATScore = score;
+		
+	}
+	public Sophomore(String name, double gpa)
+	{
+		super(name, gpa);
+      this.setGrade(10);
+		PSATScore = 0;
+	}
+	//getters and setters
+	public int getPSATScore()
+	{
+		return PSATScore;
+	}
+	public void setPSATScore(int score)
+	{
+		PSATScore = score;
+	}
+   
+   public int compareTo(Object temp)
+   {
+      Sophomore other = (Sophomore) temp;
+      if (getPSATScore() > other.getPSATScore())
+         return 1;
+      else if (getPSATScore() < other.getPSATScore())
+         return -1;
+      else
+         return 0;
+   }
+   
+	//toString
+	public String toString()
+	{
+		return super.toString() + "  " + PSATScore+ " Good luck on your PSAT!";
+	}
+}

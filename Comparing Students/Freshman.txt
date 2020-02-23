@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Freshman extends Student
+{
+   Scanner scan = new Scanner(System.in);
+   
+   public Freshman(String name, double gpa)
+	{
+		super(name, gpa);
+      this.setGrade(9);
+      System.out.println("How old is this freshmen? ");
+      this.setAge(scan.nextInt());
+	}
+   
+   public int compareTo(Object temp)
+   {
+      Freshman other = (Freshman) temp;
+      if (getAge() > other.getAge())
+         return 1;
+      else if (getAge() < other.getAge())
+         return -1;
+      else
+         return 0;
+   }
+   
+	public String toString()
+	{
+		return super.toString() + " join a club!";
+	}
+}

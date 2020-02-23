@@ -1,0 +1,61 @@
+public class StudentTest{
+   public static void main(String[] args){
+      Student s1 = new Freshman("Argos",3.5); // age = 14
+      Student s2 = new Freshman("Blanche",3.7); // age = 15
+      Student s3 = new Sophomore("Caly",3.7, 1100);
+      Student s4 = new Sophomore("Decima",3.7, 1200);
+      Student s5 = new Junior("Europa",3.7, 1300);
+      Student s6 = new Junior("Fortis",3.2, 1310);
+      Student s7 = new Senior("Gregory",3.2);
+      Student s8 = new Senior("Helena",1.2);
+      
+      int comp = s1.compareTo(s2);
+      if(comp==0){
+    	  System.out.println("Argos and Blanche are the same age.");
+      }
+      else if(comp<0){
+    	  System.out.println("Argos is younger than Blanche.");
+      }
+      else
+    	  System.out.println("Argos is older than Blanche.");
+      
+      comp = s3.compareTo(s4);
+      if(comp==0){
+    	  System.out.println("Caly and Decima got the same PSAT score.");
+      }
+      else if(comp<0){
+    	  System.out.println("Caly got a lower score than Decima on the PSAT.");
+      }
+      else{
+    	  System.out.println("Caly got a higher score than Decima on the PSAT.");
+      }
+      
+      comp = s5.compareTo(s6);
+      if(comp==0){
+    	  System.out.println("Europa and Fortis got the same SAT score.");
+      }
+      else if(comp<0){
+    	  System.out.println("Europa got a higher score than Fortis on the SAT.");
+      }
+      else{
+    	  System.out.println("Europa got a lower score than Fortis on the SAT.");
+      }
+      
+      comp = s7.compareTo(s8);
+      if(comp==0){
+    	  System.out.println("Gregory and Helena have the same GPA.");
+      }
+      else if (comp<0){
+    	  System.out.println("Gregory has a lower GPA than Helena.");
+      }
+      else{
+    	  System.out.println("Gregory has a higher GPA than Helena.");
+      } 
+      System.out.println((Freshman)s1);
+      System.out.println((Sophomore)s3);
+      System.out.println((Junior)s5);
+      System.out.println((Senior)s7);
+      
+      
+   } //end main method
+} //end class

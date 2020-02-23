@@ -1,0 +1,46 @@
+
+public class Junior extends Student
+{
+   private int SATScore;
+	
+	//2 constructors
+	public Junior(String name, double gpa)
+	{
+		super(name,gpa);
+      this.setGrade(11);
+		SATScore = 0;
+	}
+	public Junior(String name, double gpa, int score)
+	{
+		super(name,gpa);
+      this.setGrade(11);
+		SATScore = score;
+	}
+	
+	//getter and setter
+	public int getSATScore()
+	{
+		return SATScore;
+	}
+	
+	public void setSATScore(int score)
+	{
+		SATScore = score;
+	}
+   public int compareTo(Object temp)
+   {
+      Junior other = (Junior) temp;
+      if (getSATScore() > other.getSATScore())
+         return 1;
+      else if (getSATScore() < other.getSATScore())
+         return -1;
+      else
+         return 0;
+   }
+	//toString
+	public String toString()
+	{
+		return super.toString() + "  " + SATScore+ " Good luck on your SAT!";
+	}
+
+}

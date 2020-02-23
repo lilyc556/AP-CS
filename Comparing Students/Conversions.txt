@@ -1,0 +1,115 @@
+import java.util.Scanner;
+public class Conversions 
+{	
+	Scanner scan = new Scanner(System.in);
+	int num;
+	
+	void getVal() 
+      {
+		System.out.println("Binary to Decimal");
+		scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		num = Integer.parseInt(scan.nextLine(), 2);
+      String decimal = Integer.toString(num);
+		System.out.println("Decimal Value is: " + decimal);
+     
+     
+      System.out.println("\n\nBinary to Octal");
+		scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		num = Integer.parseInt(scan.nextLine(), 2);
+      String octal = Integer.toOctalString(num);
+		System.out.println("Octal Value is: " + octal);
+      
+      
+      System.out.println("\n\nBinary to HexaDecimal");
+		scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		num = Integer.parseInt(scan.nextLine(), 2);
+      String hexa = Integer.toHexString(num);
+		System.out.println("HexaDecimal Value is: " + hexa);
+     
+     
+		System.out.println("\n\nDecimal to Binary");
+		scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		num = Integer.parseInt(scan.nextLine());
+      String binary = Integer.toBinaryString(num);
+		System.out.println("Binary Value is: " + binary);
+      
+      
+      System.out.println("\n\nDecimal to Octal");
+		scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		num = Integer.parseInt(scan.nextLine());
+      String octall = Integer.toOctalString(num);
+		System.out.println("Octal Value is: " + octall);
+      
+	
+      System.out.println("\n\nDecimal to HexaDecimal");
+		scan = new Scanner(System.in);
+      System.out.println("Enter a number: ");    
+		num = Integer.parseInt(scan.nextLine());
+      String hexaa = Integer.toHexString(num);
+      System.out.println("HexaDecimal Value is: " + hexaa);
+      
+ 
+      System.out.println("\n\nOctal to Binary");
+		scan = new Scanner(System.in);
+      System.out.println("Enter a number: ");    
+		num = Integer.parseInt(scan.nextLine());
+      String poop = Integer.toBinaryString(num);
+      System.out.println("Binary Value is: " +  poop); 
+      
+      
+      System.out.println("\n\nOctal to Decimal");
+		scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		num = Integer.parseInt(scan.nextLine(), 8);
+      String decimaal = Integer.toString(num);
+      System.out.println("Decimal Value is: " + decimaal);
+      
+      
+      
+      System.out.println("\n\nOctal to HexaDecimal");
+		scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		num = Integer.parseInt(scan.nextLine(), 8);
+      String hexaaa = Integer.toHexString(num);
+      System.out.println("HexaDecimal Value is: " + hexaaa);
+      
+      
+      System.out.println("\n\nHexaDecimal to Binary");
+		scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		num = Integer.parseInt(scan.nextLine(), 16);
+      String binaryyy = Integer.toBinaryString(num);
+      System.out.println("Binary Value is: " + binaryyy);
+      
+      
+      System.out.println("\n\nHexaDecimal to Decimal");
+		scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		num = Integer.parseInt(scan.nextLine(), 16);
+      String decimaall = Integer.toString(num);
+      System.out.println("Decimal Value is: " + decimaall);
+      
+      
+      System.out.println("\n\nHexaDecimal to Octal");
+		scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		num = Integer.parseInt(scan.nextLine(), 16);
+      String octaall = Integer.toOctalString(num);
+      System.out.println("Octal Value is: " + octaall);
+      }
+	      void convert() {}
+}
+      class MainClass 
+         {
+	   public static void main(String args[]) 
+		{  Conversions obj = new Conversions();
+		obj.getVal();
+		obj.convert();  }   
+         }
+
+
