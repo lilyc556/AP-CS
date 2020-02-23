@@ -1,0 +1,38 @@
+public class Card {
+	private String rank;
+	private String suit;
+	private int value;
+	
+	public Card(String rankz, String suits){
+		rank = rankz;
+		suit = suits;
+		if(rank.equals("Ace")){
+			value = 1;
+		}
+		else if(rank.equals("Jack") || rank.equals("Queen") || rank.equals("King")){
+			value = 10;
+		}
+		else {
+			value = Integer.parseInt(rank);
+		}
+		
+	} //method
+	
+	public String getRank() { return rank; }
+	
+	public String getSuit() {return suit;}
+	
+	public int getValue() {return value;}
+	
+	public boolean compare(Card a){
+		if (rank.equals(a.getRank()) && suit.equals(a.getSuit()) && value == a.getValue()){
+			return true;
+		}
+		return false;
+	}
+	
+	public String toString(){
+		return rank + " of " + suit + " (point value = " + value + ")";
+	}
+
+} //class

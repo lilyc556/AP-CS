@@ -1,0 +1,19 @@
+
+public class CardTester {
+	public static void main(String[] args) {
+		
+		Card a = new Card("Ace","Clubs");
+		Card b = new Card("Ace","Clubs");
+		Card c = new Card("2","Hearts");
+		Card d = new Card("7","Diamonds");
+		
+		System.out.println(a.getRank());
+		System.out.println(a.getSuit());
+		System.out.println(a.getValue());
+		System.out.println(a.compare(b));
+		System.out.println(a.compare(c));
+		System.out.println(c.toString());
+		
+	}
+
+}

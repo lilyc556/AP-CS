@@ -1,0 +1,39 @@
+public class DeckTester {
+
+ public static void main(String[] args) {
+  
+  String[] ranks1 = {"2","7","King"};
+  String[] suits1 = {"Clubs", "Hearts"};
+  
+  Deck a = new Deck(ranks1, suits1);
+  
+  String[] ranks2 = {/*"2","7","King"*/};
+  String[] suits2 = {/*"Clubs", "Hearts"*/};
+  
+  Deck b = new Deck(ranks2, suits2);
+  
+  String[] ranks3 = {"Queen","Ace","6"};
+  String[] suits3 = {"Spades", "Diamonds"};
+  
+  Deck c = new Deck(ranks3, suits3);
+  
+  a.shuffle();
+  System.out.println(b.isEmpty());
+  System.out.println(c.isEmpty());
+  System.out.println(a.getSize());
+  System.out.println();
+  
+  while(!a.isEmpty()){
+   System.out.println(a.deal());
+  }
+  System.out.println();
+  while(!b.isEmpty()){
+   System.out.println(b.deal());
+  }
+  System.out.println();
+  while(!c.isEmpty()){
+   System.out.println(c.deal());
+  }
+  
+ }
+}
